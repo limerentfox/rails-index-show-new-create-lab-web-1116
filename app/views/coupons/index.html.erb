@@ -1,0 +1,6 @@
+<!-- show all coupons in database & link to their respective show pages-->
+<h1>Coupon Index</h1>
+<% @coupons.each do |coupon| %><ul>
+  <li><%= link_to "Coupon Code: #{coupon.coupon_code} | Store: #{coupon.store}", coupon_path(coupon)  %></li>
+</ul>
+<% end %>
